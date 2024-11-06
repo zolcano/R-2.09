@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        {% extends "main.html" %}
+        {% block title %} formulaire {% endblock %}
+    </head>
+    <body>
+    {% block content %}
+        <form action="/myfirstapp/controleur" method="get">{% csrf_token %}
+            <label for="nom"> Nom :</label>
+            <input type="text" name="nom"/>
+            <input type="submit" value="valider"/>
+        </form>
+    {% endblock %}
+    </body>
+</html>

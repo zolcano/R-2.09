@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'myfirstapp/index.css' %}">
+        <title>{% block title %}Mon Site {% endblock %} </title>
+    </head>
+    <body>
+        <div id="sidebar">
+            {% block sidebar %}
+                <a href="/myfirstapp/formulaire">Formulaire</a>
+                <a href="/myfirstapp/index">Accueil</a>
+            {% endblock %}
+        </div>
+        <div id="content">
+            {% block content %}
+                <h1> bloc principal </h1>
+            {% endblock %}
+        </div>
+    </body>
+</html>
