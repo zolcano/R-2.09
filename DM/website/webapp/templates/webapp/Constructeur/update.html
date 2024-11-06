@@ -1,0 +1,11 @@
+{% extends "webapp/template.html" %}
+{% block title %} Mobile | Modifier un Constructeur {% endblock %}
+
+{% block content %}
+    <h1>Modification de {{Constructeur.marque}} :</h1>
+    <form method="post" action="/Constructeur/processing_update/{{Constructeur.id}}/">
+        {% csrf_token %}
+        {{form.as_ul}}
+        <input type="submit" value="Valider"/>
+    </form>
+{% endblock %}

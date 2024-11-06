@@ -1,0 +1,11 @@
+{% extends "webapp/template.html" %}
+{% block title %}Mobile | Modifier un téléphone{% endblock %}
+
+{% block content %}
+    <h1>Modification du téléphone {{Mobile.title}} :</h1>
+    <form method="post" action="/Mobile/processing_update/{{Mobile.id}}/">
+        {% csrf_token %}
+        {{form.as_ul}}
+        <input type="submit" value="Valider"/>
+    </form>
+{% endblock %}

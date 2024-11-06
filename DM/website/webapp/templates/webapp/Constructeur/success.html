@@ -1,0 +1,8 @@
+{% extends "webapp/template.html" %}
+{% block title %} Mobile | Success {% endblock %}
+
+{% block content %}
+    <h1> Le constructeur a été ajouté avec succès !</h1>
+    <p>Le constructeur {{Constructeur.marque}} originaire de/du {{Constructeur.pays}} a bien été enregistré !</p>
+    <a href="/Constructeur"> Retour à la liste des Constructeurs </a>
+{% endblock %}

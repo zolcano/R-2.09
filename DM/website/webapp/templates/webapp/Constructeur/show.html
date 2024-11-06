@@ -1,0 +1,11 @@
+{% extends "webapp/template.html" %}
+{% block title %}Mobile | {{Constructeur.title}}{% endblock %}
+
+{% block content %}
+    <h2>Entrée SQL n°{{Constructeur.id}} :</h2>
+    <p><u>Marque</u> : {{Constructeur.marque}}.</p>
+    <p><u>Pays</u> : {{Constructeur.pays}}.</p>
+    <a href="/Constructeur/update/{{Constructeur.id}}"> Modifier </a>
+    <a href="/Constructeur/delete/{{Constructeur.id}}"> Supprimer </a>
+    <a href="/Constructeur"> Retour à la liste des constructeurs </a>
+{% endblock %}

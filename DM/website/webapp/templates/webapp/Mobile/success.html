@@ -1,0 +1,8 @@
+{% extends "webapp/template.html" %}
+{% block title %}Mobile | Success{% endblock %}
+
+{% block content %}
+    <h2>Téléphone ajouté avec succès !</h2>
+    <p>Le téléphone {{Mobile.nom}} de la marque {{Mobile.constructeur}} a bien été enregistré !</p>
+    <a href="/Mobile">Retour à la liste des téléphones</a>
+{% endblock %}

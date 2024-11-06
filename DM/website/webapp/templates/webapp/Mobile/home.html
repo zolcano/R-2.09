@@ -1,0 +1,30 @@
+{% extends "webapp/template.html" %}
+{% block title %}Mobile | téléphones{% endblock %}
+
+{% block content %}
+    <h2>liste des téléphones :</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Constructeur</th>
+                <th>Nom</th>
+                <th>date de parution</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for Mobiles in Mobile %}
+                <tr>
+                    <td>{{Mobiles.constructeur}}</td>
+                    <td>{{Mobiles.nom}}</td>
+                    <td>{{Mobiles.date_parution}}</td>
+                    <td><a href="/Mobile/show/{{Mobiles.id}}">Afficher</a></td>
+                    <td><a href="/Mobile/update/{{Mobiles.id}}">Modifier</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="/Mobile/add">Ajouter un téléphone</a>
+    <a href="/Constructeur">Voir les Constructeurs</a>
+    <a href="/">Revenir à la page principale</a>
+{% endblock %}

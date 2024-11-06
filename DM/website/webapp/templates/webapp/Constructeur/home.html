@@ -1,0 +1,28 @@
+{% extends "webapp/template.html" %}
+{% block title %} Mobile | Constructeur {% endblock %}
+
+{% block content %}
+    <h1>liste des constructeurs :</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Marque</th>
+                <th>Pays</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for Constructeurs in Constructeur %}
+                <tr>
+                    <td>{{Constructeurs.marque}}</td>
+                    <td>{{Constructeurs.pays}}</td>
+                    <td><a href="/Constructeur/show/{{Constructeurs.id}}">Afficher</a></td>
+                    <td><a href="/Constructeur/update/{{Constructeurs.id}}">Modifier</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="/Constructeur/add">Ajouter un Constructeur</a>
+    <a href="/Mobile">Voir les téléphones</a>
+    <a href="/">Revenir à la page principale</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "webapp/template.html" %}
+{% block title %}Mobile | {{Mobile.title}}{% endblock %}
+
+{% block content %}
+    <h2>Entrée SQL n°{{Mobile.id}} :</h2>
+    <p><u>Marque</u> : {{Mobile.constructeur}}.</p>
+    <p><u>Année de sortie</u> : {{Mobile.date_parution}}.</p>
+    <p><u>Prix</u> : {{Mobile.prix}} euros.</p>
+    <a href="/Mobile/update/{{Mobile.id}}">Modifier</a>
+    <a href="/Mobile/delete/{{Mobile.id}}">Supprimer</a>
+    <a href="/Mobile">Retour à la liste des Téléphones</a>
+{% endblock %}
